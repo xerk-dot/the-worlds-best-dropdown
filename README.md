@@ -1,5 +1,7 @@
 # Frontend Engineer Challenge
 
+This repo is for a technical assessment to make a dropdown.
+
 ## Project Overview
 
 This repository contains a custom-built dropdown menu component developed using either React or plain JavaScript. The component is designed from scratch without relying on any pre-built dropdowns from component libraries (ShadCN, Material UI, HTML select, or Ant Design). The focus of this implementation is on creating an elegant component architecture rather than on styling.

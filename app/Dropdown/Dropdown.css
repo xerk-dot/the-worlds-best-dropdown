@@ -1,0 +1,116 @@
+.dropdown-container {
+  position: relative;
+  width: 100%;
+  font-family: var(--font-sans, sans-serif);
+  user-select: none;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  color: var(--foreground);
+}
+
+.dropdown-selected-value {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.25rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  color: var(--foreground);
+}
+
+.dropdown-select-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.dropdown-select-actions button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.dropdown-select-actions button:hover {
+  text-decoration: underline;
+}
+
+.dropdown-options-list {
+  overflow-y: auto;
+  max-height: var(--dropdown-max-height, 300px);
+  scrollbar-width: thin;
+}
+
+
+.dropdown-option {
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-option:hover {
+  background-color: #f9fafb;
+}
+
+.dropdown-option.selected {
+  background-color: #f0f9ff;
+}
+
+.dropdown-option input[type="checkbox"] {
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dropdown-header,
+  .dropdown-options {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  .dropdown-option:hover {
+    background-color: #374151;
+  }
+  
+  .dropdown-option.selected {
+    background-color: #0c4a6e;
+  }
+  
+  .dropdown-select-actions {
+    border-color: #374151;
+  }
+}
