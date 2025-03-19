@@ -1,6 +1,6 @@
 # Frontend Engineer Challenge
 
-This repo is for a technical assessment to make a dropdown.
+This repo is of a dropdown written from scratch, done for a technical assessment.
 
 ## Project Overview
 
